@@ -1,0 +1,14 @@
+import { Controller, Get } from '@nestjs/common';
+import { MembersService } from './members.service';
+
+@Controller('members')
+export class MembersController {
+  constructor(private readonly membersService: MembersService) {}
+
+  @Get('')
+  getAll() {
+    const members = this.membersService.findAll();
+
+    return members;
+  }
+}
