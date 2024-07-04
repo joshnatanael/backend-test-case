@@ -4,7 +4,8 @@ import { SequelizeModuleOptions } from '@nestjs/sequelize';
 import { databaseConfig } from './database-config';
 
 // Environment Setup
-const dotenv_path = path.resolve('.env');
+const env = process.env.NODE_ENV;
+const dotenv_path = path.resolve(process.cwd(), env ? `.env.${env}` : '.env');
 dotenv.config({ path: dotenv_path });
 
 const dbConfig = databaseConfig();
