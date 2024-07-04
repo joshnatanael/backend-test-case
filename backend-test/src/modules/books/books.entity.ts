@@ -1,4 +1,3 @@
-import { DataTypes } from 'sequelize';
 import {
   Column,
   HasMany,
@@ -6,10 +5,10 @@ import {
   PrimaryKey,
   Table,
 } from 'sequelize-typescript';
-import { MemberBook } from 'src/member-books/member-books.entity';
+import { MemberBook } from 'src/modules/member-books/member-books.entity';
 
 @Table
-export class Member extends Model {
+export class Book extends Model {
   @PrimaryKey
   @Column({
     allowNull: false,
@@ -19,13 +18,17 @@ export class Member extends Model {
   @Column({
     allowNull: false,
   })
-  name: string;
+  title: string;
 
   @Column({
-    type: DataTypes.DATE,
-    allowNull: true,
+    allowNull: false,
   })
-  penalized: string;
+  author: string;
+
+  @Column({
+    allowNull: false,
+  })
+  stock: number;
 
   @HasMany(() => MemberBook)
   memberBooks?: MemberBook[];

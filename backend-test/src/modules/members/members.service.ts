@@ -1,6 +1,6 @@
 import { Inject, Injectable } from '@nestjs/common';
 import { Member } from './members.entity';
-import { MemberBook } from 'src/member-books/member-books.entity';
+import { MemberBook } from 'src/modules/member-books/member-books.entity';
 import sequelize from 'sequelize';
 
 @Injectable()

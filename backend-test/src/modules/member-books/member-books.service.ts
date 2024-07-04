@@ -5,9 +5,9 @@ import {
   ForbiddenException,
 } from '@nestjs/common';
 import { MemberBook } from './member-books.entity';
-import { BooksService } from 'src/books/books.service';
+import { BooksService } from 'src/modules/books/books.service';
 import { Op } from 'sequelize';
-import { MembersService } from 'src/members/members.service';
+import { MembersService } from 'src/modules/members/members.service';
 import * as dayjs from 'dayjs';
 import { Sequelize } from 'sequelize-typescript';
 
