@@ -3,7 +3,7 @@
 ## Running the app
 
 ### Setup database
-- edit .env file with database data
+- edit .env.production file with database data
 
 ### Run application
 ```bash
