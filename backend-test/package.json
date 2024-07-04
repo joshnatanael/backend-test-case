@@ -26,6 +26,7 @@
     "@nestjs/core": "^9.0.0",
     "@nestjs/platform-express": "^9.0.0",
     "@nestjs/sequelize": "^10.0.1",
+    "@nestjs/swagger": "^7.4.0",
     "dayjs": "^1.11.11",
     "joi": "^17.13.3",
     "mysql2": "^3.10.2",
